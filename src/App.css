@@ -1,22 +1,58 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
+html {
+  font-family: Roboto
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.application{
+  --header-height: 50px;
+  --footer-height: 10px;
+  --container-height: 600px;
+  --container-width: 600px;
+  --content-height: calc(var(--container-height) - (var(--header-height) + var(--footer-height)));
+  box-shadow: 5px 5px ;
+
+  --gray-light: #f8f8f8;
+  --black: #212121;
+  width: 100vw;
+  height: 100vh;
+
+  background: repeating-linear-gradient(45deg , rgb(27, 132, 191), rgb(27, 132, 191) 100px, var(--gray-light) 100px, var(--gray-light) 101px, rgb(27, 132, 191) 101px);
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #09d3ac;
+.application__container{
+  width: var(--container-width);
+  min-height: var(--container-height);
+  background-color: white;
+  position: relative;
+}
+.application__header{
+  height: var(--header-height);
+  width: 100%;
+  box-shadow: 0 4px 4px -4px var(--gray-dark);
+  z-index: 10;
+  position: absolute;
+  top: 0;
+}
+.application__footer{
+  width: 100%;
+  height: var(--footer-height);
+  box-shadow: 0 -4px 4px -4px var(--gray-dark);
+  z-index: 10;
+  position: absolute;
+  bottom: 0;
+}
+.application__content{
+  overflow-y: auto;
+  height: var(--content-height);
+  margin-top: var(--header-height);
+  margin-bottom: var(--footer-height);
+  background-color: var(--gray-light);
+  z-index: 9;
 }

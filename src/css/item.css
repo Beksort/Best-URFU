@@ -1,0 +1,46 @@
+.item{
+    list-style: none;
+    padding: 10px;
+    position: relative;
+    display: flex;
+}
+.item:before{
+    font-family: "Font Awesome 5 Free" ;
+    font-weight: 900;
+    position: absolute;
+    height: 100%;
+    display: flex;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+}
+.item_dir{
+    border: 1px solid var(--gray);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.item_dir:before{
+    content: '\f07b';
+    color: var(--gray)
+}
+ .item_file:before{
+     content: '\f15b';
+     color: var(--blue)
+ }
+
+ .item_back:before{
+     content: '\f3e5';
+     color: var(--gray-dark);
+ }
+
+.item__text{
+    margin-left: 30px;
+}
+
+.item_back{
+    cursor: pointer;
+}

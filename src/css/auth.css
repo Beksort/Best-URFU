@@ -1,0 +1,28 @@
+.auth{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.auth__control{
+    justify-content: center;
+}
+.auth__info{
+    justify-content: center;
+}
+.auth__text_bold{
+    font-weight: bold;
+}
+.auth__img-container{
+    justify-content: center;
+}
+.auth__img{
+    height: 150px;
+}
+.auth__text{
+    text-align: center;
+}
+.auth__row:not(:last-child){
+    margin-bottom: 40px;
+}

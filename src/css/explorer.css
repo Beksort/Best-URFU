@@ -1,0 +1,7 @@
+.explorer{
+    padding: 10px !important;
+}
+
+.explorer__item:not(:last-child){
+    margin-bottom: 10px;
+}
